@@ -3,38 +3,148 @@
 @import 'reset';
 @import 'header';
 
+$card: 10vw;
+$size: $card - $card/8;
+$half: $size/2;
+$quarter: $size/4;
+$quinto: $half + $half/2;
+$halfQuarter: $quarter/2;
+$eight: $size/8;
+
+$pentag: $size - 30;
+
 header {
-  padding: 40px;
+  padding: responsive(40, 80) responsive(30, 60);
+  h1 {
+    font-family: $spartan;
+    font-weight: 500;
+    font-size: 16px;
+  }
 }
 
 main {
-  padding: 40px;
+  justify-content: center;
   display: grid;
-  //grid-template-columns: repeat(8, 1fr);
-  //grid-template-rows: repeat(20, calc(12.5vw - 40px));
-  grid-gap: 40px;
-
-  //@media (max-width: 1100px ){
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(20, calc(20vw - 40px));
-  //}
-
-  // @media (max-width: 700px ){
-  //   grid-template-columns: repeat(2, 1fr);
-  //   grid-template-rows: repeat(20, calc(50vw - 40px));
-  // }
-
-
+  grid-gap: $eight;
+  grid-template-columns: repeat(10, $size);
+  grid-template-rows: repeat(20, $size);
+  padding: 5vw 0;
   div {
+    background-color:#f2f2f2;
     width: 100%;
     grid-row: span 1;
-    background-color: pink;
     position: relative;
     &:before, &:after {
       content: '';
       position: absolute;
     }
-    &.div1 {
+    &.div01 {
+      background: #165ADE;
+    }
+    &.div02 {
+      border-radius: 100%;
+      background: #fbd800;
+    }
+    &.div03 {
+      &:before {
+        background: #DC1B1F;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 70%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    &.div04 {
+      &:before {
+        background: #165ADE;
+        border-radius: 100%;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 70%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    &.div05 {
+      width: 0;
+      height: 0;
+      border-left: 0vw solid transparent;
+      border-right: $size solid transparent;
+      border-bottom: $size solid #fbd800;
+    }
+    &.div06 {
+      width: 0;
+      height: 0;
+      border-left: $half solid transparent;
+      border-right: $half solid transparent;
+      border-bottom: $size solid #DC1B1F;
+    }
+    &.div07 {
+      width: 0;
+      height: 0;
+      border-left: $size solid transparent;
+      border-right: 0vw solid transparent;
+      border-bottom: $size solid #165ADE;
+    }
+    &.div08 {
+      border-bottom: $size solid #fbd800;
+      border-left: $quarter solid transparent;
+      border-right: $quarter solid transparent;
+      height: 0;
+      width: $size;
+    }
+    &.div09{
+      width: $quinto;
+      height: $size;
+      transform: skew(12deg) translate($halfQuarter, 0px);
+      background: #DC1B1F;
+    }
+    &.div10 {
+      &:before {
+        width: 0;
+        height: 0;
+        border-left: $half solid transparent;
+        border-right: $half solid transparent;
+        border-top: $quinto solid #165ADE;
+        bottom: 0;
+        // left: -10vw;
+      }
+      &::after {
+        width: 0;
+        height: 0;
+        border-left: $half solid transparent;
+        border-right: $half solid transparent;
+        border-bottom: $quinto solid #165ADE;
+        top: 0;
+      }
+    }
+    &.div11 {
+      position: relative;
+      &:before {
+        height: 0;
+        width: 0;
+        top: 0;
+        left: 0;
+        border-width: 0 5vw 5vw;
+        border-style: solid;
+        border-color: transparent transparent #fbd800;
+      }
+      &:after {
+        bottom: 0;
+        width: calc(10vw - 10vw/8 - 60px);
+        border-width: 5vw 30px 0;
+        border-style: solid;
+        border-color: #fbd800 transparent;
+      }
+    }
+    
+
+
+
+    &.div19 {
       border: 6vw solid blue;
       background: repeating-linear-gradient(45deg,red,red 2vw,#fbfbfb 2vw,#fbfbfb 4vw);
       &:before, &:after {
@@ -51,7 +161,7 @@ main {
         right: -6vw;
       }
     }
-    &.div2 {
+    &.div20 {
       overflow: hidden;
       border-radius: 100%;
       background-color: red;

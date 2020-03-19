@@ -3,6 +3,10 @@ $img: '../assets/images/';
 $white: #ffffff;
 $black: #000000;
 
+$muli: 'Muli', sans-serif;
+$fira: 'Fira Code', monospace;
+$spartan: 'Spartan', sans-serif;
+
 @function responsive($value1, $value2, $width1: 320, $width2: 1920) {
   $x1: $width1;
   $x2: $width2;
