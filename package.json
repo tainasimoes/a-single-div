@@ -8,9 +8,12 @@
   "private": true,
   "scripts": {
     "clear-cache": "rimraf -rf ./node_modules/.cache/babel-loader/*",
-    "dev": "webpack-dev-server",
+    "start": "webpack-dev-server",
     "build": "NODE_ENV=production webpack",
     "heroku-postbuild": "yarn clear-cache && yarn build"
+  },
+  "engines": {
+    "node": "12.14.1"
   },
   "dependencies": {
     "animejs": "^2.2.0",
