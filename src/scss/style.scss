@@ -56,3 +56,17 @@ body {
     }
   }
 }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  p {
+    color: #fff;
+    font-size: 14px;
+  }
+}
