@@ -7,11 +7,8 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "clear-cache": "rimraf -rf ./node_modules/.cache/babel-loader/*",
     "dev": "webpack-dev-server",
-    "build": "NODE_ENV=production webpack",
-    "start": "node server.js",
-    "heroku-postbuild": "webpack -p"
+    "start": "node server.js"
   },
   "engines": {
     "node": "12.14.1"
