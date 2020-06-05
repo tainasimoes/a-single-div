@@ -8,9 +8,10 @@
   "private": true,
   "scripts": {
     "clear-cache": "rimraf -rf ./node_modules/.cache/babel-loader/*",
-    "start": "webpack-dev-server",
+    "dev": "webpack-dev-server",
     "build": "NODE_ENV=production webpack",
-    "heroku-postbuild": "yarn clear-cache && yarn build"
+    "start": "node server.js",
+    "heroku-postbuild": "webpack -p"
   },
   "engines": {
     "node": "12.14.1"
