@@ -8,11 +8,7 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server",
-    "start": "node server.js"
-  },
-  "engines": {
-    "npm": "6.13.4",
-    "node": "12.14.1"
+    "build": "NODE_ENV=production webpack"
   },
   "dependencies": {
     "animejs": "^2.2.0",
